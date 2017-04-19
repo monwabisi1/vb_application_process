@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81794503-8F50-4D82-A37C-B679D2229857}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>sample</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>sample.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>sample.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QuickStart, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="RadControlSpy, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.WinControls, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Docking, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadChart, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.BreezeExtended, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Miscellaneous, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2010, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Telerik, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Vista, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Windows7, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikCommon, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikData, Version=2010.2.10.806, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin interfaces\AddApplicant.Designer.vb">
+      <DependentUpon>AddApplicant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\AddApplicant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\addapplicant2.Designer.vb">
+      <DependentUpon>addapplicant2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\addapplicant2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Allemployees.Designer.vb">
+      <DependentUpon>Allemployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Allemployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\calculate_shortlist.Designer.vb">
+      <DependentUpon>calculate_shortlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\calculate_shortlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form10.Designer.vb">
+      <DependentUpon>Form10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form8.Designer.vb">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form6.Designer.vb">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\Form9.Designer.vb">
+      <DependentUpon>Form9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\Form9.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\IDpopup.Designer.vb">
+      <DependentUpon>IDpopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\IDpopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin interfaces\popup.Designer.vb">
+      <DependentUpon>popup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin interfaces\popup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusinessClass.vb" />
+    <Compile Include="login\LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login\LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin interfaces\AddApplicant.resx">
+      <DependentUpon>AddApplicant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\addapplicant2.resx">
+      <DependentUpon>addapplicant2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Allemployees.resx">
+      <DependentUpon>Allemployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\calculate_shortlist.resx">
+      <DependentUpon>calculate_shortlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form10.resx">
+      <DependentUpon>Form10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form8.resx">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form6.resx">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\Form9.resx">
+      <DependentUpon>Form9.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\IDpopup.resx">
+      <DependentUpon>IDpopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin interfaces\popup.resx">
+      <DependentUpon>popup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login\LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\09_pencil-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approved.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shortlisted.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rejected.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoff1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoff2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shortlisted1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rejected1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\littlepig lg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com net.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com net1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_data.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interview1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_data1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\littlepig logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backarrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\short.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reject1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cal.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approved1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approved.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backsmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginback1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add applicant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Littlepig Screensaver - Copy %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicants.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-5-xxl.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
